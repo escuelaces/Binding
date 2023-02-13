@@ -4,14 +4,18 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" prefHeight="597.0" prefWidth="518.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.binding.HelloController">
+<VBox alignment="CENTER" prefHeight="900.0" prefWidth="600.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.binding.AlumnosController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-
-    <Label fx:id="alumnoActual" />
-   <ChoiceBox fx:id="clase" onAction="#onAlumnoSelec" prefWidth="150.0" />
-   <ListView fx:id="listaAlumnos" prefHeight="200.0" prefWidth="200.0" />
+   <TableView fx:id="tablaAlumnos" prefHeight="400.0" prefWidth="200.0">
+     <columns>
+       <TableColumn fx:id="Nombre" prefWidth="75.0" text="Nombre" />
+       <TableColumn fx:id="Apellidos" prefWidth="75.0" text="Apellidos" />
+         <TableColumn fx:id="Edad" prefWidth="75.0" text="Edad" />
+         <TableColumn fx:id="NotaMedia" prefWidth="275.0" text="NotaMedia" />
+     </columns>
+   </TableView>
    <HBox prefHeight="17.0" prefWidth="478.0">
       <children>
          <Label text="Edad">
